@@ -3,8 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0a1f3a">
 <title>Orion Soluções Financeiras | Consórcio sem juros</title>
 <meta name="description" content="Seu próximo bem, sem juros. Imóveis, veículos, máquinas, equipamentos e serviços com a administradora certa para o seu objetivo.">
+<link rel="preload" as="image" href="logo-ad.webp" type="image/webp">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
@@ -27,7 +29,8 @@
   * { box-sizing: border-box; margin: 0; padding: 0; }
   html { scroll-behavior: smooth; }
   body { font-family: var(--font-body); background: var(--navy); color: #fff; line-height: 1.6; -webkit-font-smoothing: antialiased; }
-  img { max-width: 100%; display: block; }
+  img { max-width: 100%; height: auto; display: block; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
   .wrap { width: 100%; max-width: 1080px; margin: 0 auto; padding: 0 20px; }
   .gold { color: var(--gold); }
 
@@ -134,7 +137,7 @@
 
 <div class="topbar">
   <div class="wrap">
-    <img src="logo-ad.png" alt="Orion Soluções Financeiras">
+    <img src="logo-ad.webp" alt="Orion Soluções Financeiras" width="781" height="357" fetchpriority="high">
     <a class="btn sm wa-link" href="#"><svg viewBox="0 0 24 24"><use href="#wa"/></svg><span>Falar no WhatsApp</span></a>
   </div>
 </div>
@@ -147,7 +150,7 @@
       <p class="lead">Soluções personalizadas para conquistar imóveis, veículos, máquinas, equipamentos e projetos de investimento, com a administradora certa para o seu objetivo.</p>
       <a class="btn wa-link" href="#"><svg viewBox="0 0 24 24"><use href="#wa"/></svg>Quero uma simulação</a>
     </div>
-    <div class="collage"><img src="img/categorias.jpg" alt="Imóveis, veículos leves e pesados, motos, máquinas e equipamentos, serviços e outros bens" width="647" height="568"></div>
+    <div class="collage"><img src="img/categorias.webp" fetchpriority="high" decoding="async" alt="Imóveis, veículos leves e pesados, motos, máquinas e equipamentos, serviços e outros bens" width="647" height="568"></div>
   </div>
 </header>
 
@@ -214,9 +217,9 @@
     <span class="script">Fale com um consultor</span>
     <h2>ONDE NOS ENCONTRAR</h2>
     <div class="cards">
-      <a class="card" href="https://www.google.com/maps/search/?api=1&query=Rua+Joaquim+Murtinho+2860" target="_blank" rel="noopener">
+      <a class="card" href="https://www.google.com/maps/search/?api=1&query=Rua+Joaquim+Murtinho+2860+Campo+Grande+MS" target="_blank" rel="noopener">
         <div class="ring"><svg viewBox="0 0 24 24"><path d="M12 21s7-6.200 7-11.500A7 7 0 0 0 5 9.500C5 14.800 12 21 12 21z"/><circle cx="12" cy="9.500" r="2.500"/></svg></div>
-        <div><h3>Endereço</h3><p>Rua Joaquim Murtinho, 2860<br>Ver no mapa</p></div>
+        <div><h3>Endereço</h3><p>Rua Joaquim Murtinho, 2860<br>Campo Grande - MS<br>Ver no mapa</p></div>
       </a>
       <a class="card" href="https://www.instagram.com/orionconsorcio/" target="_blank" rel="noopener">
         <div class="ring"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.500" cy="6.500" r=".8"/></svg></div>
@@ -236,8 +239,9 @@
 
 <footer>
   <div class="wrap">
-    <img src="logo-ad.png" alt="Orion Soluções Financeiras">
-    <p>Rua Joaquim Murtinho, 2860 · Instagram @orionconsorcio</p>
+    <img src="logo-ad.webp" alt="Orion Soluções Financeiras" width="781" height="357" loading="lazy" decoding="async">
+    <p>Rua Joaquim Murtinho, 2860 · Campo Grande - MS</p>
+    <p>Instagram @orionconsorcio</p>
     <p>Consórcio é regulamentado e fiscalizado pelo Banco Central do Brasil.</p>
   </div>
 </footer>
