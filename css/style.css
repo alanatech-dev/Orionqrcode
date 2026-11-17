@@ -494,3 +494,77 @@ h2{font-size:clamp(2rem,4.2vw,3.1rem);text-transform:none}
   .split .w>span{transform:none}
   .marquee{overflow-x:auto}
 }
+
+/* ===== Ajustes de responsividade (todos os aparelhos) ===== */
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%;overflow-x:clip}
+body{overflow-x:clip;min-width:320px}
+/* nada de entrada deslizando para fora da tela */
+.sym-list{overflow:hidden}
+.sym-list .reveal:nth-child(odd){transform:translateY(26px)}
+/* grades e flex nunca estouram a largura */
+.hero__in>*,.grid2>*,.cards>*,.method>*,.pillars>*,.for__grid>*,.perks>*,.footer__top>*,.showcase>*,.partners>*,.row>*{min-width:0}
+.partners{--cols:2}
+.method,.cards,.pillars,.for__grid,.perks,.partners{grid-template-columns:repeat(var(--cols,1),minmax(0,1fr))}
+.step-card>div,.flow__step,.card,.pillar,.sym-list li>div,.contact-list span{min-width:0;overflow-wrap:anywhere}
+h1,h2,h3{overflow-wrap:break-word;hyphens:auto}
+/* aparelhos com entalhe / barra de gestos */
+.header__in{padding-left:max(0px,env(safe-area-inset-left));padding-right:max(0px,env(safe-area-inset-right))}
+.wa-float{right:max(20px,env(safe-area-inset-right));bottom:max(20px,env(safe-area-inset-bottom))}
+.to-top{right:max(28px,calc(env(safe-area-inset-right) + 8px));bottom:calc(max(20px,env(safe-area-inset-bottom)) + 74px)}
+.footer{padding-bottom:calc(2rem + env(safe-area-inset-bottom))}
+/* altura da tela em celulares com barra de endereço que encolhe */
+.hero{min-height:100vh;min-height:100svh}
+/* formulário sem zoom automático no iPhone e alvos de toque confortáveis */
+.field input,.field select,.field textarea{font-size:16px}
+.check{min-height:44px;align-items:center}
+.check input{width:22px;height:22px}
+.map__link{padding:.8em 1.2em}
+.contact-list a,.link--inline{display:inline-block;padding-block:.35rem}
+.link{min-height:44px}
+/* telas pequenas */
+@media (max-width:380px){
+  body{font-size:15.5px}
+  .container{width:min(100% - 28px,var(--max))}
+  .brand img{height:42px}
+  .hero h1{font-size:clamp(2rem,10vw,2.5rem)}
+  .btn{padding:.95em 1.3em;font-size:.95rem}
+  .step-card{flex-direction:column;align-items:flex-start;text-align:left}
+  .hero__facts{gap:1rem}
+  .tabs{gap:.45rem}
+  .tab{padding:.55em 1em;font-size:.9rem}
+  .for__box,.form,.card,.pillar,.flow__step{padding-inline:1.1rem}
+  .nav{padding-inline:14px}
+}
+/* menu móvel rola quando a tela é baixa (celular deitado) */
+@media (max-width:860px){
+  .nav{max-height:calc(100vh - var(--hdr));max-height:calc(100dvh - var(--hdr));overflow-y:auto;overscroll-behavior:contain}
+  .nav a{min-height:44px;display:flex;align-items:center}
+  .nav__cta{justify-content:center}
+}
+/* tablets e notebooks pequenos: mais de uma coluna */
+@media (min-width:621px) and (max-width:1020px){
+  .pillars{--cols:2}
+  .cards{--cols:2}
+  .partners{--cols:3}
+  .perks{--cols:2}
+  .for__grid{--cols:3}
+}
+@media (min-width:1021px){
+  .method,.perks,.for__grid{--cols:3}
+  .cards{--cols:3}
+  .pillars{--cols:2}
+  .partners{--cols:4}
+}
+@media (min-width:621px) and (max-width:1020px){
+  .card--wide{grid-column:1/-1}
+  .footer__top{grid-template-columns:1fr 1fr}
+}
+/* telas muito grandes */
+@media (min-width:1600px){
+  :root{--max:1320px}
+  body{font-size:18px}
+}
+@media (min-width:2200px){
+  :root{--max:1500px}
+  body{font-size:19px}
+}
